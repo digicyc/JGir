@@ -1,0 +1,10 @@
+=hello   Get a Friendly greeting.
+=add class <classname>  Add a url to associate with a classname
+=class <classname>   Get a URL for a specified Java Class
+!page               Get the attention of the Programmers.
+=page info          Get information on the Last Known !page
+=jabber connect     Admin's restart jabber connection for bot
+=load <Plugin>      Loads requested plugin
+=unload <Plugin>    Unloads requested plugin
+=reload config      Reloads the config file
+=plugs              List of loaded Plugins

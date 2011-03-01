@@ -1,0 +1,46 @@
+# GirBot configuration
+#
+# CHANGE THE BELOW VALUES!
+botName=JGir
+serverName=irc.SERVER.net
+# Comma seperated list of channels.
+channels=#JGir,#pircbot
+
+# This is for the IRC server auth.
+botUser=USERNAME
+botPass=PASSOWRD
+
+# This is for the admin.
+userName=ADMINUSERNAME
+userPass=ADMINPASSWORD
+version=GirBot v0.71a
+
+# This is for Jabber Info.
+jabberServ=FAKEjabber.org
+jabberId=jgir
+jabberPass=PASSWORD
+# Comma Seperated list of Jabber ID's to send alerts to.
+jabberList=john@FAKEjabber.org/work,fred@FAKEjabber.org,
+
+# commands List, key/value pairs of commands
+commandsList=commands.txt
+
+# Admin Options
+adminJID=YOU@FAKEjabber.org
+adminJID2=YOURCELL@FAKEjabber.org
+adminName=YOU
+adminHost=YOURHOSTNAME
+commandChannel=#jgir
+# Comma Seperated list of names to OP when they join the commandChannel
+opsList=bot1,bot2
+# Comma Seperated list of Hostnames to identify the above users.
+hostnames=localhost,127.0.0.1.ptr.us.xo.net
+
+#Database settings
+dburl=jdbc:mysql://localhost/jgir
+dbusername=USERNAME
+dbpassword=PASSWORD
+
+#Plugin Directory. Don't forget the last /
+pluginDir=/home/cyclone/jgir/Plugs/
+plugs=Command,JCommand

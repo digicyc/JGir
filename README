@@ -1,0 +1,21 @@
+jgir.properties = Properties for the bot and user info.
+store.properties = Just a flatFile database for saved Links.
+
+A list of some of the commands:
+==============================
+# Core Commands.
+=jabber reconnect
+=load Plugin
+=unload Plugin
+=reload config
+
+# Command Plugin commands
+=page info
+!page <page msg>
+=add class <className> <http://url>
+=class <className>
+
+* NOTE: commands should all start with =
+  Except for certain exceptions, like !page.
+
+

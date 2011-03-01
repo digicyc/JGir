@@ -1,0 +1,8 @@
+Feb 10, 2011 11:07:25 AM org.antitech.jgir.logger.LogSystem <init>
+INFO: #####- Begin Logging -#####
+Feb 10, 2011 11:07:29 AM org.antitech.jgir.logger.LogSystem log
+INFO: [INFO]: *[PLUGIN]: Plugin Was loaded Successful.
+Feb 10, 2011 11:15:48 AM org.antitech.jgir.logger.LogSystem log
+INFO: [INFO]: [TIMER UP]Check Reconnect!
+Feb 10, 2011 11:15:48 AM org.antitech.jgir.logger.LogSystem log
+INFO: [INFO]: [TIMER] Connection Still EXISTS!

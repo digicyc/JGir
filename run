@@ -1,0 +1,2 @@
+#!/usr/bin/tcsh
+screen -m -S jgir /opt/java/jre/bin/java -Djava.util.logging.config.file=properties/logging.properties -Djava.library.path=lib -jar JGir.jar

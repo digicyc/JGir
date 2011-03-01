@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<project name="JGir" default="dist" basedir=".">
+	<property name="build" location="build" />
+	<property name="src" location="src" />
+	<property name="debug" value="true" />
+
+	<target name="init">
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac source="1.5" srcdir="${src}" deprecation="off" destdir="${build}" debug="${debug}">
+			<classpath>
+				<pathelement location="lib/pircbot.jar" />
+				<pathelement location="lib/smack.jar" />
+				<pathelement location="lib/smackx.jar" />
+				<pathelement location="lib/commons-logging-1.0.4.jar" />
+				<pathelement location="lib/commons-collections-2.1.1.jar" />
+				<pathelement location="lib/jdbc.jar" />
+				<pathelement location="lib/log4j-1.2.11.jar" />
+			</classpath>
+		</javac>
+		<unzip src="lib/pircbot.jar" dest="${build}" />
+		<unzip src="lib/smack.jar" dest="${build}" />
+		<unzip src="lib/smackx.jar" dest="${build}" />
+		<unzip src="lib/commons-logging-1.0.4.jar" dest="${build}" />
+		<unzip src="lib/commons-collections-2.1.1.jar" dest="${build}" />
+		<unzip src="lib/jdbc.jar" dest="${build}" />
+		<unzip src="lib/log4j-1.2.11.jar" dest="${build}"/>
+		
+
+		<copy todir="${build}/org/antitech/jgir/dbase">
+			<fileset dir="${src}/org/antitech/jgir/dbase">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+		<copy todir="${build}">
+			<fileset dir="properties" />
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}" />
+	</target>
+
+	<target name="cleanbuild">
+		<delete dir="${build}" />
+	</target>
+
+	<target name="dist" depends="compile">
+		<jar destfile="JGir.jar" basedir="${build}">
+			<manifest>
+				<attribute name="Main-Class" value="org.antitech.jgir.JGirMain" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run" depends="dist">
+		<java jar="JGir.jar" fork="true" />
+	</target>
+
+</project>
